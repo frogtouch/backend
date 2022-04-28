@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promoteurs",
+  "info": {
+    "singularName": "promoteur",
+    "pluralName": "promoteurs",
+    "displayName": "promoteur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "promoteur": {
+      "type": "string"
+    },
+    "lieu": {
+      "type": "string"
+    },
+    "vefas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vefa.vefa",
+      "mappedBy": "promoteur"
+    }
+  }
+}

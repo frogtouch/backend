@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vefas",
+  "info": {
+    "singularName": "vefa",
+    "pluralName": "vefas",
+    "displayName": "Vefa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "prix": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "promoteur": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::promoteur.promoteur",
+      "inversedBy": "vefas"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
